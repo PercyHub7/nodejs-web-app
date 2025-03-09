@@ -12,11 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Debug Environment Variables
-      run: echo "DOCKER_USERNAME is set" && echo "DOCKER_PASSWORD is set"
-      env:
-        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
     - name: Login Dockerhub
       env:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
@@ -24,6 +19,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t PercyHub7/nodejs-web-app .
+      run: docker build -t $DOCKER_USERNAME/nodejs-web-app .
     - name: Push to Dockerhub
-      run: docker push PercyHub7/nodejs-web-app:latest
+      run: docker push $DOCKER_USERNAM/nodejs-web-app:latest

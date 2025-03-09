@@ -12,6 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Debug Environment Variables
+      run: echo "DOCKER_USERNAME is set" && echo "DOCKER_PASSWORD is set"
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
     - name: Login Dockerhub
       env:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}

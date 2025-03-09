@@ -19,6 +19,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t $DOCKER_USERNAME/nodejs-web-app .
+      run: docker build -t percy7/nodejs-web-app/nodejs-web-app .
     - name: Push to Dockerhub
-      run: docker push $DOCKER_USERNAME/nodejs-web-app:latest
+      run: docker push percy7/nodejs-web-app:latest

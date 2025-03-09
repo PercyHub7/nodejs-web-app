@@ -1,19 +1,20 @@
-FROM node:16
+# Use the official Node.js image as the base image
+FROM node:14
 
-# Create app directory
-WORKDIR /app
+# Create and change to the app directory
+WORKDIR /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
+# Install dependencies
 RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
 
-# Bundle app source
+# Copy the rest of the application code
 COPY . .
 
-EXPOSE 8080
-CMD [ "node", "server.js" ]
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Start the application
+CMD ["node", "app.js"]

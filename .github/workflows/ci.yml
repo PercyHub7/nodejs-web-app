@@ -21,4 +21,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t $DOCKER_USERNAME/nodejs-web-app .
     - name: Push to Dockerhub
-      run: docker push $DOCKER_USERNAM/nodejs-web-app:latest
+      run: docker push $DOCKER_USERNAME/nodejs-web-app:latest

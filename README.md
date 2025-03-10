@@ -1,10 +1,10 @@
-# README
+# Documentation: Automating Deployment of a NodeJS Web Application to AWS EC2 using GitHub Actions
 
 This documentation outlines the steps to set up a CI/CD pipeline using GitHub Actions to automate the deployment of a Node.js web application to an AWS EC2 instance. It includes instructions for setting up the GitHub repository, configuring the EC2 instance, installing Docker, and creating the GitHub Actions workflow.
 
 ## Table of Contents
 
-- [README](#readme)
+- [Documentation: Automating Deployment of a NodeJS Web Application to AWS EC2 using GitHub Actions](#documentation-automating-deployment-of-a-nodejs-web-application-to-aws-ec2-using-github-actions)
   - [Table of Contents](#table-of-contents)
   - [Prerequisites](#prerequisites)
   - [Step 1: Setting Up the GitHub Repository](#step-1-setting-up-the-github-repository)
